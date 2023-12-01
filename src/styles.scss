@@ -1,2 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+html, body { height: 100%; }
+body { margin: 0;font-family:Cera Pro,sans-serif }
+:root{
+  --st-color-yellow-light: #ffdb4b;
+  --st-color-yellow: #ffcf00;
+
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+
+
+  text-decoration: none;
+  color: inherit;
+
+}
+
+a:hover {
+
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+
+  list-style: none;
+  margin-bottom: 0 !important;
+  padding: 0%;
+}
