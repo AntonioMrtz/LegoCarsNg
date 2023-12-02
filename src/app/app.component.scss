@@ -1,13 +1,12 @@
 .app-wrapper {
   display: grid;
   grid-template-areas:
-    "head head head"
     "navbar main-content main-content"
     "navbar main-content main-content"
     "navbar footer footer";
 }
 
-header {
+header-app {
   grid-area: head;
 }
 
