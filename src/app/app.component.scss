@@ -1,23 +1,32 @@
 .app-wrapper {
-  display: grid;
-  grid-template-areas:
-    "navbar main-content main-content"
-    "navbar main-content main-content"
-    "navbar footer footer";
+  height: 100%;
+  display: flex;
+}
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-left: var(--width-sidebar);
+
 }
 
-header-app {
-  grid-area: head;
+sidebar{
+  position: relative;
+  z-index: 1000;
 }
 
-main {
-  grid-area: main-content;
+main{
+  padding: 2%;
+  display: flex;
+  flex-grow: 1;
 }
 
-sidebar {
-  grid-area: navbar;
+header-profile{
+  width: 100%;
 }
 
-footer {
-  grid-area: footer;
+app-footer{
+  width: 100%;
+  justify-content: end;
 }

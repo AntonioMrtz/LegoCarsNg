@@ -3,13 +3,17 @@
   flex-direction: column;
   background-color: var(--st-color-yellow);
   height: 100%;
-  width: 25svw;
-  padding: 2%;
+  width: 100%;
   flex-grow: 1;
+  padding: 2%;
   position: fixed;
   top: 0;
   left: 0;
   border: 1px solid var(--st-color-black);
+  width: var(--width-sidebar);
+  margin: 0;
+  padding: 0;
+
 
   img {
     width: 8rem;
@@ -23,7 +27,7 @@
 
     li {
       display: flex;
-      text-transform: uppercase;
+      text-transform: capitalize;
       border-radius: 8px;
       box-shadow: 0 4px 6px -6px #000000;
 
