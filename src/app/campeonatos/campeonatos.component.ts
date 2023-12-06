@@ -17,6 +17,5 @@ export class CampeonatosComponent {
 
   constructor() {
     this.campeonatos = this.campeonatoService.obtenerCampeonatos();
-    console.log(this.campeonatos)
   }
 }

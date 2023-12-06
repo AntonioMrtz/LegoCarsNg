@@ -29,7 +29,6 @@ export class SolicitarCampeonatoComponent {
   }
 
   solicitarCampeonato() {
-    console.log(this.carreras);
     this.campeonatoService.anadirCampeonato(this.carreras);
 
   }

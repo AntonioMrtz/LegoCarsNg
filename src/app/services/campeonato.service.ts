@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CampeonatoService {
-
   private readonly CAMPEONATOS_KEY = 'campeonatos';
-
 
   anadirCampeonato(carreras: any[]): void {
     const campeonatos = this.obtenerCampeonatos();
     const nuevoCampeonato = {
       id: this.generarIdUnico(),
-      carreras: carreras
+      carreras: carreras,
     };
     campeonatos.push(nuevoCampeonato);
     const campeonatosJson = JSON.stringify(campeonatos);
@@ -26,6 +24,10 @@ export class CampeonatoService {
     } else {
       return [];
     }
+  }
+  obtenerCampeonato(id: string) {
+    let campeonatos = this.obtenerCampeonatos();
+    return campeonatos.find((campeonato) => campeonato.id == id);
   }
 
   private generarIdUnico(): string {
