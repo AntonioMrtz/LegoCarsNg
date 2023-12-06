@@ -1,1 +1,11 @@
-<p>prueba works!</p>
+<header-profile headerTitle="Ver campeonatos"></header-profile>
+
+
+@for (campeonato of campeonatos; track campeonato.id){
+  <p>{{campeonato.id}}</p>
+  @for (carrera of campeonato.carreras; track carrera.localizacion){
+    <p>{{carrera.localizacion}}</p>
+    <p>{{carrera.numeroMaxParticipantes}}</p>
+  }
+
+}

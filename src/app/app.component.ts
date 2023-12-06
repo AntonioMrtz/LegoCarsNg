@@ -13,4 +13,12 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 })
 export class AppComponent {
   title = 'LegoCarsNg';
+  headerTitle: string = 'Home';
+
+  setHeaderTitle(titulo: string) {
+    this.headerTitle = titulo;
+  }
+
+
+
 }

@@ -87,3 +87,16 @@ ul {
   margin-bottom: 0 !important;
   padding: 0%;
 }
+
+.active {
+  color: var(--st-color-red);
+}
+
+main{
+    background-image: url('assets/imgs/fondo.jpeg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
