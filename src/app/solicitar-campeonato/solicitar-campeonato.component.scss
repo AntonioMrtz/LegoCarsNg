@@ -1,0 +1,117 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid rgb(103, 103, 103)
+}
+td:last-child{
+ text-align: center;
+}
+
+.trash-icon{
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-delete{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input{
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  max-width: 20rem;
+  max-height: 4rem;
+  height: 2rem;
+
+
+}
+input[type="number"]{
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+}
+form{
+  display: flex;
+
+  justify-content: center;
+  margin: 2rem;
+
+}
+
+.container{
+
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 400px;
+
+}
+
+.btn-solcamp{
+  background-color: var(--st-color-red);
+  color: white;
+  border-radius: 3rem;
+  font-weight: bold;
+  font-size: medium;
+  padding: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.btn-solcamp:disabled{
+
+    background-color: #ac484d;
+    color: white;
+    border-radius: 3rem;
+    font-weight: bold;
+    font-size: medium;
+    padding: 0.5rem;
+    margin: 1rem;
+    cursor: default;
+}
+
+.btn-addcarrera{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  color: #000000;
+  cursor: pointer;
+
+}
+.btn-addcarrera:disabled
+{
+  color: #aeadad ;
+  background-color: transparent ;
+  border: none;
+  font-size: medium;
+  cursor: default;
+}
+.btn-addcarrera:enabled:hover{
+  color: var(--st-color-red);
+}
+
+.label-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+
+}
+
+.label-input label{
+  justify-content: left;
+  align-items: left;
+  align-self: start;
+  margin-bottom: 0.5rem;
+}

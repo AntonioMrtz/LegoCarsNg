@@ -1,0 +1,50 @@
+<header-profile headerTitle="Solicitar campeonato"></header-profile>
+<div class="container">
+  <form [formGroup]="carreraForm" (submit)="addCarrera()">
+    <div class="label-input">
+      <label for="localizacion">Localización</label>
+      <input formControlName="localizacion" placeholder="Ej: Calle Ramirez" required>
+    </div>
+    <div class="label-input">
+      <label for="numeroMaxParticipantes">Número máximo de participantes</label>
+      <input formControlName="numeroMaxParticipantes" placeholder="Ej: 120" type="number" min="0" required>
+    </div>
+    <div class="label-input">
+      <label for="fecha">Fecha</label>
+      <input formControlName="fecha" placeholder="Fecha de la carrera" type="date" required>
+    </div>
+    <button class="btn-addcarrera" type="submit"
+      [disabled]="carreraForm.controls.localizacion.invalid || carreraForm.controls.numeroMaxParticipantes.invalid || carreraForm.controls.fecha.invalid || carreras.length>=8">+
+      Añadir carrera</button>
+  </form>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>Nº</th>
+        <th>Localización</th>
+        <th>Número máximo de participantes</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(carrera of carreras; track carrera.id){
+      <tr>
+        <td>{{$index+1}}</td>
+        <td>{{carrera.localizacion}}</td>
+        <td>{{carrera.numeroMaxParticipantes}}</td>
+        <td>{{carrera.fecha}}</td>
+        <td>
+          <button class="btn-delete">
+            <img src="assets/icons/trash-bin.png" alt="Borrar carrera" (click)="borrarCarrera(carrera.id)"
+              class="trash-icon">
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <button class="btn-solcamp" (click)="solicitarCampeonato()"
+    [disabled]="!(carreras.length>=3 && carreras.length<=8)">Solicitar campeonato</button>
+</div>
