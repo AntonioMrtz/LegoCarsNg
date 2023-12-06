@@ -1,0 +1,26 @@
+.container {
+
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  padding: 5%;
+
+}
+
+.wrapper-content {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .wrapper-campeonatos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+
+  }
+}
