@@ -1,0 +1,19 @@
+img{
+  width: 800px;
+  height: 500px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1171px) {
+
+  img{
+    width: 300px;
+    height: auto;
+  }
+}

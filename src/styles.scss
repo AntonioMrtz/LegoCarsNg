@@ -100,3 +100,18 @@ main{
     background-size: cover;
     background-attachment: fixed;
 }
+main:has(app-home) {
+  background-image: none; /* Anular la imagen de fondo */
+  background-color: var(--st-color-blue);
+  padding: 0 !important;
+}
+
+.container{
+
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 400px;
+
+}

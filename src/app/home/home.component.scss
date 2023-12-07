@@ -1,0 +1,116 @@
+.card-info{
+  display: flex;
+  background-color: white;
+  border-radius: 2rem;
+  margin: 2rem;
+  overflow: hidden;
+  justify-content: center;
+  justify-content: space-between;
+
+}
+
+.card-info img{
+  width: 400px;
+  height: 400px;
+  margin: 0;
+
+}
+.card-info .info{
+  margin:2rem;
+
+
+}
+
+.placeholder-defer{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+
+}
+
+
+.btn-iniciasesion{
+  color: white;
+  background-color: var(--st-color-red);
+  border: 1px solid var(--st-color-yellow);
+  border-radius: 0.5rem;
+  font-size: larger;
+  padding: 1rem;
+}
+
+.btn-registrate{
+  color: black;
+  background-color: white;
+  border: 1px solid var(--st-color-yellow);
+  border-radius: 0.5rem;
+  font-size: larger;
+  padding: 1rem;
+
+}
+
+
+.panel-btns{
+
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+
+}
+
+
+.principal{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // espacio entre los elementos
+  gap: 4rem;
+}
+
+.left-principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  color: var(--st-color-red-dark);
+  font-weight: 1000;
+  font-size: 4rem;
+  margin: 0;
+}
+.principal img{
+  width: 200px;
+  height: 200px;
+  margin:2rem
+}
+
+@media (max-width: 1171px) {
+
+  .principal img{
+    width: auto;
+    height: 200px;
+    margin:2rem
+  }
+  .card-info img{
+    width: 200px;
+    height: 200px;
+    margin: 0;
+
+  }
+  .card-info .info{
+    margin:1rem;
+    max-width: 20rem;
+  }
+  .card-info{
+    gap: auto;
+  }
+
+}
