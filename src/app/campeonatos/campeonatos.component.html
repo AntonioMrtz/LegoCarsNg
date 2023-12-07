@@ -1,0 +1,13 @@
+<header-profile headerTitle="Ver Campeonatos"></header-profile>
+<div class="container">
+<div class="wrapper-content">
+    <div class="wrapper-campeonatos">
+      @for (campeonato of campeonatos; track campeonato.id) {
+        <app-campeonatos-card id={{campeonato.id}} routePath="/campeonato/"></app-campeonatos-card>
+      } @empty {
+        No hay campeonatos disponibles
+      }
+    </div>
+  </div>
+
+</div>
