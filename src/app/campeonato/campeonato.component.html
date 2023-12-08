@@ -1,12 +1,54 @@
-<header-profile headerTitle={{headerTitulo}} ></header-profile>
+<header-profile headerTitle={{headerTitulo}}></header-profile>
 <div class="container">
-<div class="wrapper-content">
+  <div class="header-main-content">
+    <a class="rankings">
+      <img src="assets/icons/icons8-trofeo-60.png" alt="">
+      <p>Rankings</p>
+    </a>
+  </div>
+  <div class="wrapper-content">
     <div class="wrapper-campeonatos">
       @for (carrera of carreras; track carreras.id) {
-        <app-carreras-card id={{carrera.id}} routePath="/carrera/"></app-carreras-card>
+      <app-carreras-card id={{carrera.id}} routePath="/carrera/"></app-carreras-card>
       } @empty {
-        No hay campeonatos disponibles
+      No hay campeonatos disponibles
       }
+    </div>
+  </div>
+
+  <div class="footer-content">
+    <header>
+      <h3>Coches disponibles</h3>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de coche</th>
+          <th>Nº de serie</th>
+          <th>Potencia Motor</th>
+          <th>Nº ruedas</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(coche of coches; track coche.tipo){
+          <tr>
+            <td>{{coche.tcoche}}</td>
+            <td>{{coche.nserie}}</td>
+            <td>{{coche.pmotor}}</td>
+            <td>{{coche.nruedas}}</td>
+          </tr>
+        }
+          <tr>
+            <th><input type="text" [(ngModel)]="tcoche" placeholder="4x4"></th>
+            <th><input type="text" [(ngModel)]="nserie" placeholder="82372383W"></th>
+            <th><input type="number" [(ngModel)]="pmotor" placeholder="2000"></th>
+            <th><input type="number" [(ngModel)]="nruedas" placeholder="4"></th>
+          </tr>
+      </tbody>
+    </table>
+    <div>
+      <button class="btn-addcarrera" type="submit" (click)="addCoche()">+ Añadir coche</button>
     </div>
   </div>
 
