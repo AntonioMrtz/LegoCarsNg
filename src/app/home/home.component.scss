@@ -64,14 +64,14 @@
 
 
 .principal{
-  width: 100%;
-  height: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   // espacio entre los elementos
   gap: 4rem;
+  margin-top: 3%;
+  padding: 5% 0 10% 0;
 }
 
 .left-principal{
