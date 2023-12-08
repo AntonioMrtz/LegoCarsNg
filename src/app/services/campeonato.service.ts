@@ -33,4 +33,9 @@ export class CampeonatoService {
   private generarIdUnico(): string {
     return Math.random().toString(36).substring(2, 9);
   }
+
+  getCampeonatoFromCarrera(id:string){
+    let campeonatos = this.obtenerCampeonatos();
+    return campeonatos.find((campeonato) => campeonato.carreras.find((carrera: any) => carrera.id===id));
+  }
 }
